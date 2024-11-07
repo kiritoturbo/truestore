@@ -1,0 +1,156 @@
+#!/usr/bin/expect
+# Khai báo biến môi trường cho các lựa chọn
+# set CHOICE_1 28
+# set CHOICE_2 1
+# set CHOICE_3 2 
+# Bắt đầu kết nối với chương trình hoặc dịch vụ
+spawn sudo larvps
+send "28\r"
+sleep 1
+send "1\r"
+sleep 1
+send "3\r"
+sleep 1
+send "happylandingstore.com\r"
+sleep 1
+
+ send "y\r"
+sleep 35
+send '1\r'
+# expect "*Thanh cong:\r"
+# puts "Output: $expect_out(buffer)"
+# expect {
+#     "$ " {
+#         expect {
+#             "Thanh cong" {
+#                 # Nếu nhận được thông báo "Thanh cong", in ra "Thực hiện thành công!"
+#                 puts "Thực hiện thành công!"
+#                 # Đóng kết nối SSH
+#                 send "exit\r"
+#                 expect eof
+#                 exit 0
+#             }
+#             timeout {
+#                 # Nếu quá thời gian chờ mà không nhận được thông báo "Thanh cong", in ra "Quá thời gian chờ, thực hiện không thành công."
+#                 puts "Quá thời gian chờ, thực hiện không thành công."
+#                 # Đóng kết nối SSH
+#                 send "exit\r"
+#                 expect eof
+#                 exit 1
+#             }
+#         }
+#     }
+#     timeout {
+#         # Nếu quá thời gian chờ mà không nhận được dấu nhắc "$", in ra thông báo lỗi
+#         puts "Quá thời gian chờ, không nhận được dấu nhắc '$'."
+#         exit 1
+#     }
+# }
+# send "y\r"
+# expect "$ "
+
+# # In ra kết quả
+# # puts "Output: $expect_out(buffer)"
+
+# puts "Output:ok"
+
+
+# sleep 2
+# send '\003\r'
+# sleep 1
+# send 'larvps\r'
+# sleep 1
+# send '2\r'
+# sleep 1
+# send '1\r'
+# sleep 1
+# send '2\r'
+# sleep 1 
+# send 'y\r'
+# expect 'Thanh cong:'
+
+
+# Kết thúc kết nối
+expect eof
+
+exit
+
+# # #!/bin/bash
+
+# #echo -e "larvps\n"
+# #echo -e "28\n"
+
+# # sudo 'larvps'
+# # sudo '28'
+
+# # echo '1\n'
+# # echo "" | read -r
+
+
+# # truong 
+# # Gửi số 1 cho lệnh echo "28"
+# # export TERM=xterm
+# whoami
+
+# # echo -e '"28"\n1' | sudo larvps
+# # # Thực hiện kết nối SSH đến máy chủ
+# # sshpass -p 'Zm7bJ9N%#Uo#2' ssh -o StrictHostKeyChecking=no root@113.192.8.160 << EOF
+
+
+# # Gửi lệnh đến máy chủ
+# # Thực thi command "larvps" với quyền root
+# # ping -c 1 kollectiblestoreus.com 
+
+# # Cài đặt biến môi trường CHOICE cho mỗi bước
+# export CHOICE_1=28
+# export CHOICE_2=1
+# export CHOICE_3=1
+
+# # Gửi lựa chọn cho mỗi bước vào menu của Larvps
+# (
+#   echo $CHOICE_1
+#   sleep 1  # Chờ một khoảng thời gian trước khi gửi lựa chọn tiếp theo
+#   echo $CHOICE_2
+#   sleep 1
+#   echo $CHOICE_3
+# ) | sudo larvps
+# # sleep 2
+
+# # # # Thực thi command "28" với quyền root
+# # echo -e "28\n1"
+# # # sleep 2
+
+# # # Sử dụng kết quả của sudo 28 làm đầu vào cho sudo 28
+
+# # sleep 2
+
+# # # Thực thi command "2" với quyền root
+# # sudo 2
+# # sleep 2
+
+# # # In ra "happylandingstore.com"
+# # echo "happylandingstore.com"
+# # sleep 2
+
+# # # In ra "y"
+# # echo "y"
+# # sleep 2
+
+# # # In ra "0"
+# # echo "0"
+# # sleep 2
+
+# # # In ra "2"
+# # echo "2"
+# # sleep 2
+
+# # # In ra "1"
+# # echo "1"
+# # sleep 2
+
+# # # In ra "1"
+# # echo "1"
+# # sleep 2
+
+# # # In ra "y"
+# # echo "y"

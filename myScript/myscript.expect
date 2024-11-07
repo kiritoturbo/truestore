@@ -1,0 +1,20 @@
+#!/usr/bin/expect
+set hostname "45.77.98.179"
+set username "root"
+set password "!N4eFD*tD(B5_yo%"
+spawn ssh $username@$hostname
+expect {
+                    "*assword:" {
+                        send "$password\r"
+                    }
+                    "*yes/no*" {
+                        send "yes\r"
+                        exp_continue
+                    }
+                }
+expect "$ "
+send "add_site shopzillas.com\r"
+expect "$ "
+sleep 30
+expect eof
+exit
